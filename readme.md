@@ -70,21 +70,22 @@ git clone https://github.com/fmuller-pns/vscode_project_template.git
 ```bash
 mv vscode_project_template  my_project_name
 ```
-
-#### 4. Open visual studio code for the new project
+#### 5. Remove the GIT directory
+```bash
+cd my_project_name
+rm -R .git
+```
+#### 6. Open visual studio code for the new project
 ```bash
 cd my_project_name
 code .
 ```
-
-#### 5. Verify paths in the `c_cpp_properties.json` file and change them if wrong.
-
+#### 7. Verify paths in the `c_cpp_properties.json` file and change them if wrong.
 ```json
 "IDF_TOOLS": "~/.espressif/tools",
 "IDF_PATH": "~/esp/esp-idf"
 ```
-
-#### 6. [Not required] Change the default project name called `main` in files.
+#### 8. [Not required] Change the default project name called `main` in files.
 1. Open `CMakeLists.txt` and replace `main` by your project name
 2. Open `Makefile` and replace `main` by your project name
 3. Open `.vscode/launch.json` and replace `main` by your project name (lines 11 and 19)
