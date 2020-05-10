@@ -64,7 +64,7 @@ git config credential.helper store
 
 #### 2. Clone the `vscode_project_template` project
 ```bash
-git clone https://github.com/fmuller-pns/vscode_project_template.git
+git clone https://github.com/fmuller-pns/esp32-vscode-project-template.git
 ```
 #### 3. Rename the `vscode_project_template` folder
 ```bash
