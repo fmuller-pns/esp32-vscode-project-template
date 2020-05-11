@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Thank you ! you just have cloned the `vscode_project_template` project.
+Thank you ! you just have cloned the `esp32-vscode-project-template` project.
 ```bash
 git clone https://github.com/fmuller-pns/esp32-vscode-project-template.git
 ```
