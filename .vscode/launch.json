@@ -6,7 +6,7 @@
       "name": "ESP32 OpenOCD",
       "type": "cppdbg",
       "request": "launch",
-      "miDebuggerPath": "${env:IDF_TOOLS}/home/esp32/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb",
+      "miDebuggerPath": "xtensa-esp32-elf-gdb",
       "cwd": "${workspaceFolder}/build",
       "program": "${workspaceFolder}/build/main.elf",
       "setupCommands": [

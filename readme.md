@@ -161,6 +161,55 @@ Now, how to communicate with GitHub ?
 
 See https://code.visualstudio.com/docs/editor/versioncontrol for more details.
 
+## Debugging with JTAG FT2232
+
+You must install FTDI FT2232 driver.
+
+### From external terminals
+
+1. Open an external terminal for building, flashing and running project
+The serial port is `/dev/ttyUSB0` identified above.
+
+```bash
+idf.py -p /dev/ttyUSB0 flash monitor
+```
+2. Open another external terminal for running `openocd` with configuration file (`ftdi_ft2232.cfg`) located in the project root.
+
+```bash
+openocd -f ftdi_ft2232.cfg
+```
+
+3. Result on openocd terminal
+
+```bash
+Open On-Chip Debugger  v0.10.0-esp32-20190313 (2019-03-13-09:52)
+Licensed under GNU GPL v2
+adapter speed: 20000 kHz
+Info : Configured 2 cores
+esp32 interrupt mask on
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : ftdi: if you experience problems at higher adapter clocks, try the command "ftdi_tdo_sample_edge falling"
+Info : clock speed 20000 kHz
+Info : JTAG tap: esp32.cpu0 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+Info : JTAG tap: esp32.cpu1 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+Info : esp32: Debug controller 0 was reset (pwrstat=0x5F, after clear 0x0F).
+Info : esp32: Core 0 was reset (pwrstat=0x5F, after clear 0x0F).
+Info : esp32: Debug controller 1 was reset (pwrstat=0x5F, after clear 0x0F).
+Info : esp32: Core 1 was reset (pwrstat=0x5F, after clear 0x0F).
+Info : Detected debug stubs @ 3ffb2950 on core0 of target 'esp32'
+Info : Listening on port 3333 for gdb connections
+```
+
+### From Visual Studio Code
+1. Click on the left on the line you want to set a breakpoint. A red bullet appears.
+
+2. Click on debug Icon
+
+3. Click on RUN `ESP32 OpenOCD`. If an error arises, click again.
+
+4. The programm stops at the breakpoint and you can see variables and more
+
 ## Generate Doxygen documentation
 
 1. Open external terminal from vscode, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
