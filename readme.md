@@ -165,22 +165,21 @@ See https://code.visualstudio.com/docs/editor/versioncontrol for more details.
 
 You must install FTDI FT2232 driver.
 
-### From external terminals
+### Step 1: From external terminals
 
-1. Open an external terminal for building, flashing and running project
+1. Connect the ESP32 board (USB)
+2. Open an external terminal for building, flashing and running project
 The serial port is `/dev/ttyUSB0` identified above.
-
 ```bash
 idf.py -p /dev/ttyUSB0 flash monitor
 ```
-2. Open another external terminal for running `openocd` with configuration file (`ftdi_ft2232.cfg`) located in the project root.
-
+3. Connect the JTAG FT2232 (USB)
+4. Open another external terminal for running `openocd` with configuration file (`ftdi_ft2232.cfg`) located in the project root.
 ```bash
 openocd -f ftdi_ft2232.cfg
 ```
 
-3. Result on openocd terminal
-
+5. Result on openocd terminal
 ```bash
 Open On-Chip Debugger  v0.10.0-esp32-20190313 (2019-03-13-09:52)
 Licensed under GNU GPL v2
@@ -201,7 +200,7 @@ Info : Detected debug stubs @ 3ffb2950 on core0 of target 'esp32'
 Info : Listening on port 3333 for gdb connections
 ```
 
-### From Visual Studio Code
+### Step 2: From Visual Studio Code
 1. Click on the left on the line you want to set a breakpoint. A red bullet appears.
 
 2. Click on debug Icon
@@ -209,6 +208,19 @@ Info : Listening on port 3333 for gdb connections
 3. Click on RUN `ESP32 OpenOCD`. If an error arises, click again.
 
 4. The programm stops at the breakpoint and you can see variables and more
+
+### Step 3: When you modify the code
+
+Do not touch the terminal with `openocd` command. 
+
+1. Stop the program into the terminal, typing `Ctrl+AltGr+]`
+2. Build, flash and run program
+The serial port is `/dev/ttyUSB0` identified above.
+```bash
+idf.py -p /dev/ttyUSB0 flash monitor
+```
+3. Click on RUN `ESP32 OpenOCD`. If an error arises, click again.
+4. The programm stops at the breakpoint and you can see variables and more 
 
 ## Generate Doxygen documentation
 
