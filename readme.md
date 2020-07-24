@@ -207,7 +207,7 @@ Info : Listening on port 3333 for gdb connections
 
 3. Click on RUN `ESP32 OpenOCD`. If an error arises, click again.
 
-4. The programm stops at the breakpoint and you can see variables and more
+4. The program stops at the breakpoint and you can see variables and more
 
 ### Step 3: When you modify the code
 
@@ -220,7 +220,7 @@ The serial port is `/dev/ttyUSB0` identified above.
 idf.py -p /dev/ttyUSB0 flash monitor
 ```
 3. Click on RUN `ESP32 OpenOCD`. If an error arises, click again.
-4. The programm stops at the breakpoint and you can see variables and more 
+4. The program stops at the breakpoint and you can see variables and more 
 
 ## Generate Doxygen documentation
 
