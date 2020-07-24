@@ -1,4 +1,4 @@
-# Visual Code Studio Template for ESP32
+# Visual Studio Code Template for ESP32
 
 ## Getting Started
 
@@ -149,7 +149,7 @@ We consider you have followed the sections above:
 
 Now, how to communicate with GitHub ?
 
-1. Open visual code studio.
+1. Open visual studio code.
 2. Click on the `Source Control` icon on your left side or use `Ctrl+Shift+G` shortcut. 
 3. For the first time, click on `Initialize Repository` button
 4. Enter a message for your first commit (ex: first commit) and click on Commit icon
