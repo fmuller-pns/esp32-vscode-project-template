@@ -124,6 +124,15 @@ idf.py -p /dev/ttyUSB0 flash monitor
 ```
 To exit monitoring, typing `Ctrl+AltGr+]`
 
+## Using Tasks for ESP32 to run and debug Project
+
+1. In the menu, select `Run Task...`
+2. Select the task you want to launch:
+- `ESP32 - Build only`: just build the project
+- `ESP32 - Flash and Monitor`: build (when modifications of code), flash and monitor
+- `ESP32 - Clean Project`: Clean project (Full clean)
+- `ESP32 - OpenOCD with FT2232`: Run in dedicated terminal the openOCD command to debug the project
+
 ## Configure GIT for your new project
 
 #### Go to your new project folder

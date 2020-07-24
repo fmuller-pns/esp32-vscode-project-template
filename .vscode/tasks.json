@@ -1,0 +1,60 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ESP32 - Build only",
+            "type": "shell",
+            "command": "idf.py build",
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": true,
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "focus": false
+              }
+        },
+        {
+            "label": "ESP32 - Flash and Monitor",
+            "type": "shell",
+            "command": "idf.py flash monitor",
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": true,
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "focus": true
+              }
+        },
+        {
+            "label": "ESP32 - OpenOCD with FT2232",
+            "type": "shell",
+            "command": "openocd -f ftdi_ft2232.cfg",
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": true,
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true,
+                "focus": false
+              }
+        }
+        ,
+        {
+            "label": "ESP32 - Clean Project",
+            "type": "shell", 
+            "command": "idf.py fullclean",
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": false,
+                "reveal": "always",
+                "panel": "shared",
+                "clear": false,
+                "focus": false
+              }
+        }
+    ]
+}
