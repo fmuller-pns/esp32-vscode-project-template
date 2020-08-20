@@ -132,6 +132,7 @@ To exit monitoring, typing `Ctrl+AltGr+]`
 - `ESP32 - Flash and Monitor`: build (when modifications of code), flash and monitor
 - `ESP32 - Clean Project`: Clean project (Full clean)
 - `ESP32 - OpenOCD with FT2232`: Run in dedicated terminal the openOCD command to debug the project
+- `ESP32 - Doxygen - HTML doc.`: Generate HTML documentation with Doxygen
 
 ## Configure GIT for your new project
 

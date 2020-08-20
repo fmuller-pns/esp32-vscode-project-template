@@ -41,8 +41,7 @@
                 "clear": true,
                 "focus": false
               }
-        }
-        ,
+        },
         {
             "label": "ESP32 - Clean Project",
             "type": "shell", 
@@ -53,6 +52,19 @@
                 "reveal": "always",
                 "panel": "shared",
                 "clear": false,
+                "focus": false
+              }
+        },
+        {
+            "label": "ESP32 - Doxygen - HTML doc.",
+            "type": "shell",
+            "command": "doxygen",
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": true,
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
                 "focus": false
               }
         }
