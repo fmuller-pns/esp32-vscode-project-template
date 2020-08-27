@@ -239,7 +239,7 @@ idf.py -p /dev/ttyUSB0 flash monitor
 
 ## Generate Doxygen documentation
 
-You can use [Using Tasks for ESP32](#Using-Tasks-for-ESP32-to-run,-debug-Project-and-so-on) or follow the steps below.
+You can use [Using Tasks for ESP32](#using-tasks-for-esp32-to-run-debug-project-and-so-on) or follow the steps below.
 
 1. Open external terminal from vscode, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
 2. Generate HTML documentation
