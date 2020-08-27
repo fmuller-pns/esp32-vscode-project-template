@@ -2,7 +2,12 @@
 
 ## Getting Started
 
-Thank you ! you just have cloned the `esp32-vscode-project-template` project.
+We consider that the Espressif IoT Development Framework (ESP-IDF) and Visual Studio Code environment is installed on the computer.
+For more details, see:  
+- https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#installation-step-by-step
+- https://code.visualstudio.com/
+
+Firstly, you have to clone the `esp32-vscode-project-template` project and follow the next steps.
 ```bash
 git clone https://github.com/fmuller-pns/esp32-vscode-project-template.git
 ```
@@ -34,7 +39,7 @@ This step renames the executable file. By default, the executable file is `main.
 2. Open `Makefile` and replace `main` by <my_project_name>
 3. Open `.vscode/launch.json` and replace `main` by <my_project_name> (lines 11 and 19)
 
-#### 7. Open an terminal from vscode to perform commands
+#### 7. Open a terminal from vscode to perform commands
 Choose an externant or internal terminal.
 
 ##### Open integrated terminal from vscode
@@ -124,7 +129,7 @@ idf.py -p /dev/ttyUSB0 flash monitor
 ```
 To exit monitoring, typing `Ctrl+AltGr+]`
 
-## Using Tasks for ESP32 to run and debug Project
+## Using Tasks for ESP32 to run, debug Project and so on
 
 1. In the menu, select `Run Task...`
 2. Select the task you want to launch:
@@ -233,6 +238,8 @@ idf.py -p /dev/ttyUSB0 flash monitor
 4. The program stops at the breakpoint and you can see variables and more 
 
 ## Generate Doxygen documentation
+
+You can use [Using Tasks for ESP32](#Using-Tasks-for-ESP32-to-run,-debug-Project-and-so-on) or follow the steps below.
 
 1. Open external terminal from vscode, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
 2. Generate HTML documentation
