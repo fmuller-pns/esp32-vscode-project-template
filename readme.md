@@ -179,6 +179,21 @@ See https://code.visualstudio.com/docs/editor/versioncontrol for more details.
 ## Debugging with JTAG FT2232
 
 You must install FTDI FT2232 driver.
+### Quick Driver installation for Linux:
+
+1. Install USB Driver
+```bash
+sudo apt-get install libusb-1.0
+$ lsusb
+Bus 001 Device 002: ID 0403:6010 Future Technology Devices International, Ltd FT2232C Dual USB-UART/FIFO IC
+```
+2. Install OpenOCD rules. The path for rule copy can be different and depend on your ESP-IDF installation.
+```bash
+$ sudo usermod -a -G dialout $USER
+$ sudo usermod -a -G plugdev $USER
+$ sudo cp ~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20190313/openocd-esp32/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d/
+$ sudo reboot
+```
 
 ### Step 1: From external terminals
 
