@@ -8,6 +8,7 @@
             "name": "esp32",
             "browse": {
                 "path": [
+                    "${workspaceFolder}/build/config",
                     "${workspaceFolder}",
                     "${IDF_PATH}/components",
                     "${IDF_TOOLS}/xtensa-esp32-elf"

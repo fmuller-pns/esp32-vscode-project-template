@@ -39,15 +39,15 @@ This step renames the executable file. By default, the executable file is `main.
 2. Open `Makefile` and replace `main` by <my_project_name>
 3. Open `.vscode/launch.json` and replace `main` by <my_project_name> (lines 11 and 19)
 
-#### 7. Open a terminal from vscode to perform commands
-Choose an externant or internal terminal.
+#### 7. Open a terminal from Visual Studio Code to perform commands
+Choose an external or internal terminal.
 
-##### Open integrated terminal from vscode
+##### Open integrated terminal from Visual Studio Code
 
   * using keyboard shortcut: `Ctrl+Shift+`<sup>2</sup>
   * or pressing `F1` key and typing `integrated`
 
-##### Open external terminal from vscode
+##### Open external terminal from Visual Studio Code
 
   * using keyboard shortcut: `Ctrl+Shift+C`
   * or pressing `F1` key and typing `external`
