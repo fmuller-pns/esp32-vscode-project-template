@@ -150,7 +150,7 @@ cd <project_name>
 git config --global user.name "your name" 
 git config --global user.email "your email address"
 ```
-#### Avoid typing your username and password in vscode each time
+#### Avoid typing your username and personal access token in vscode each time
 This is useful when connecting your GIT to GitHub.
 ```bash
 git config credential.helper store
@@ -191,7 +191,7 @@ Bus 001 Device 002: ID 0403:6010 Future Technology Devices International, Ltd FT
 ```bash
 $ sudo usermod -a -G dialout $USER
 $ sudo usermod -a -G plugdev $USER
-$ sudo cp ~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20190313/openocd-esp32/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d/
+$ sudo cp ~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20210401/openocd-esp32/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d/
 $ sudo reboot
 ```
 
@@ -257,7 +257,7 @@ idf.py -p /dev/ttyUSB0 flash monitor
 You can use [Using Tasks for ESP32](#using-tasks-for-esp32-to-run-debug-project-and-so-on) or follow the steps below.
 
 1. Open external terminal from vscode, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
-2. Generate HTML documentation
+2. Generate HTML documentation in `html_doc` folder
 
   * From the User interface (allow you updating the `Doxyfile` configuration file)
 
