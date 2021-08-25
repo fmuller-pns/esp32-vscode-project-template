@@ -6,6 +6,4 @@ sdkconfig.old
 # Production folder
 build/
 
-# Documentation folder
-html/
 
