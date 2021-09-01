@@ -1,11 +1,17 @@
 # Visual Studio Code Template for ESP32
 
-## Getting Started
+## Prerequisites
 
-We consider that the Espressif IoT Development Framework (ESP-IDF) and Visual Studio Code environment is installed on the computer.
+We consider that the Espressif IoT Development Framework (ESP-IDF), version 4.3, and Visual Studio Code environment is installed on the computer.
 For more details, see:  
-- https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#installation-step-by-step
+- https://docs.espressif.com/projects/esp-idf/en/v4.3/esp32/get-started/index.html#installation-step-by-step
 - https://code.visualstudio.com/
+
+As of VS-code v1.56.1 integrated terminals require additional configuration to work correctly. see https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations to edit the `setting.json` file and add the following entry:
+```bash
+"terminal.integrated.allowWorkspaceConfiguration":true
+```
+## Getting Started
 
 Firstly, you have to clone the `esp32-vscode-project-template` project and follow the next steps.
 ```bash

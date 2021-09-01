@@ -1,19 +1,29 @@
 {
-    "terminal.integrated.shell.windows": "cmd.exe",
-    "terminal.integrated.shellArgs.windows": [
-        "/k",
-        "c:\\esp\\esp-idf\\export.bat"
-    ],
-    "terminal.integrated.shell.linux":"/bin/bash",
-    "terminal.integrated.shellArgs.linux": [
-        "--init-file", 
-        "~/esp/esp-idf/export.sh",
-        "-i",
-    ],
-    "files.associations": {
-        "*.md": "markdown",
-        "*.mdx": "tdx",
-        "stdio.h": "c"
+  // As of VS-code v1.56.1 integrated terminals require additional configuration to work correctly. 
+  // see https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations 
+  // to edit the `setting.json` file and add the following line:
+  // "terminal.integrated.allowWorkspaceConfiguration":true
+
+  "terminal.integrated.profiles.windows": {
+    "idf": {
+      "path": "cmd.exe",
+      "args": ["/k", "<%= IDF_PATH %>/export.bat"],
+      "env": {
+      }
+    }
+  },
+  "terminal.integrated.profiles.linux": {
+    "idf": {
+      "path": "/bin/bash",
+      "args":["--init-file", "<%= IDF_PATH %>/export.sh", "-i"],
+        "env": {
+        }
     },
-    "C_Cpp.errorSquiggles": "Disabled",
+  },
+  "files.associations": {
+      "*.md": "markdown",
+      "*.mdx": "tdx",
+      "stdio.h": "c"
+   },
+   "C_Cpp.errorSquiggles": "Disabled",
 }
