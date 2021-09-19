@@ -8,7 +8,7 @@
       "request": "launch",
       "miDebuggerPath": "xtensa-esp32-elf-gdb",
       "cwd": "${workspaceFolder}/build",
-      "program": "${workspaceFolder}/build/main.elf",
+      "program": "${workspaceFolder}/build/iot.elf",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
@@ -16,7 +16,7 @@
           "ignoreFailures": true
         },
         {
-          "text": "file '${workspaceFolder}/build/main.elf'"
+          "text": "file '${workspaceFolder}/build/iot.elf'"
         },
         {
           "text": "target remote 127.0.0.1:3333"
