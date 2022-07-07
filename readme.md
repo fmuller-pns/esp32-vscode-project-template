@@ -11,6 +11,19 @@ As of VS-code v1.56.1 integrated terminals require additional configuration to w
 ```bash
 "terminal.integrated.allowWorkspaceConfiguration":true
 ```
+
+In Linux (from Ubuntu 20.x), on connecting an ESP32 board with a CP210x USB to serial converter, there is a problem of connection. Add the following entries below that disable both parts of the brltty service and allowed the ESP32 development boards to properly connect.
+```bash
+sudo systemctl stop brltty-udev.service
+sudo systemctl mask brltty-udev.service
+sudo systemctl stop brltty.service
+sudo systemctl disable brltty.service
+```
+Another solution is to uninstall brltty as below: 
+```bash
+sudo apt remove brltty
+```
+
 ## Getting Started
 
 Firstly, you have to clone the `esp32-vscode-project-template` project and follow the next steps.
