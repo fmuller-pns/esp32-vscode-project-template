@@ -203,15 +203,18 @@ You must install FTDI FT2232 driver.
 1. Install USB Driver
 ```bash
 sudo apt-get install libusb-1.0
-$ lsusb
+lsusb
+```
+Result:
+```bash
 Bus 001 Device 002: ID 0403:6010 Future Technology Devices International, Ltd FT2232C Dual USB-UART/FIFO IC
 ```
 2. Install OpenOCD rules. The path for rule copy can be different and depend on your ESP-IDF installation.
 ```bash
-$ sudo usermod -a -G dialout $USER
-$ sudo usermod -a -G plugdev $USER
-$ sudo cp ~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20210401/openocd-esp32/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d/
-$ sudo reboot
+sudo usermod -a -G dialout $USER
+sudo usermod -a -G plugdev $USER
+sudo cp ~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20210401/openocd-esp32/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d/
+sudo reboot
 ```
 
 ### Step 1: From external terminals
