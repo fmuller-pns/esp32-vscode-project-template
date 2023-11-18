@@ -19,17 +19,17 @@
                 "${workspaceFolder}",
                 "${workspaceFolder}/build/config",
                 "${workspaceFolder}/build/bootloader/config",
-		        "${IDF_PATH}/components/**",
+                "${IDF_PATH}/components/**",
                 "${IDF_TOOLS}/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include",
                 "${IDF_TOOLS}/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/xtensa-esp32-elf/include",
                 "${IDF_TOOLS}/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/8.2.0",
                 "${IDF_TOOLS}/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/8.2.0/xtensa-esp32-elf"
-
             ],
             "defines": [],
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
