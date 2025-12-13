@@ -25,5 +25,6 @@
       "*.mdx": "tdx",
       "stdio.h": "c"
    },
-   "C_Cpp.errorSquiggles": "Disabled",
+  "C_Cpp.errorSquiggles": "Disabled",
+  "idf.pythonInstallPath": "/usr/bin/python3",
 }
