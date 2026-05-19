@@ -1,10 +1,20 @@
 
-# Configuration files
+# Ignore the generated local configuration
 sdkconfig
 sdkconfig.old
 
-# Production folder
+# Ignore all compiled binaries and object files
 build/
-
-# HTML documentation
 html_doc/
+
+# Ignore local workspace settings that contain absolute machine paths
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/settings.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+

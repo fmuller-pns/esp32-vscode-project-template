@@ -1,0 +1,15 @@
+# Run the command : idf.py set-target esp32c6
+
+# =====================================================================
+# Specific configuration for ESP32-C6-DevKitC-1-N8
+# =====================================================================
+
+# ESP32-C6 is a Single-Core RISC-V processor
+CONFIG_FREERTOS_UNICORE=y
+
+# Flash Memory Configuration (N8 = 8 MB)
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="8MB"
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+

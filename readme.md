@@ -2,15 +2,11 @@
 
 ## Prerequisites
 
-We consider that the Espressif IoT Development Framework (ESP-IDF), version 4.4.1, and Visual Studio Code environment is installed on the computer.
+We consider that the Espressif IoT Development Framework (ESP-IDF), version 6.0, and Visual Studio Code environment is installed on the computer.
 For more details, see:  
-- https://docs.espressif.com/projects/esp-idf/en/v4.4.1/esp32/get-started/index.html#installation-step-by-step
+- https://docs.espressif.com/projects/esp-idf/en/v6.0/esp32/
 - https://code.visualstudio.com/
 
-As of VS-code v1.56.1 integrated terminals require additional configuration to work correctly. see https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations to edit the `setting.json` file and add the following entry:
-```bash
-"terminal.integrated.allowWorkspaceConfiguration":true
-```
 
 In Linux (from Ubuntu 20.x), on connecting an ESP32 board with a CP210x USB to serial converter, there is a problem of connection. Add the following entries below that disable both parts of the brltty service and allowed the ESP32 development boards to properly connect.
 ```bash
@@ -43,20 +39,20 @@ cd <my_project_name>
 ```bash
 rm -fR .git
 ```
-#### 4. Open visual studio code for the new project
+
+#### 4. Modify Target (default is esp32) : esp32,esp32c6,esp32s3 ...
+```bash
+idf.py set-target esp32c6
+```
+
+#### 5. Open visual studio code for the new project
 ```bash
 code .
 ```
-#### 5. Verify paths in the `c_cpp_properties.json` file and change them if wrong.
-```json
-"IDF_TOOLS": "~/.espressif/tools",
-"IDF_PATH": "~/esp/esp-idf"
+#### 6. Menu: View / Command Palette (to generate .vscode folder for configuration)
+```bash
+ESP-IDF: Add vscode configuration folder
 ```
-#### 6. [Not required] Change the default project name called `main` in files.
-This step renames the executable file. By default, the executable file is `main.elf`.
-1. Open `CMakeLists.txt` and replace `main` by <my_project_name>
-2. Open `Makefile` and replace `main` by <my_project_name>
-3. Open `.vscode/launch.json` and replace `main` by <my_project_name> (lines 11 and 19)
 
 #### 7. Open a terminal from Visual Studio Code to perform commands
 Choose an external or internal terminal.
@@ -106,6 +102,19 @@ Hello ESP32 !
 To exit monitoring, typing `Ctrl+AltGr+]`
 
 ## Useful Commands 
+
+#### Change target (example for esp32c6) 
+
+##### 1. Select new target
+```bash
+idf.py set-target esp32c6
+rm -rf .vscode
+```
+
+##### 2. In vscode, Menu: View / Command Palette (to generate new .vscode folder for configuration)
+```bash
+ESP-IDF: Add vscode configuration folder
+```
 
 #### Open external terminal from vscode to perform commands
 

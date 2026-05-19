@@ -1,0 +1,26 @@
+# Run the command : idf.py set-target esp32s3
+
+# =====================================================================
+# Specific configuration for ESP32-S3-DevKitC-1U-N8R2
+# =====================================================================
+
+# Ensure dual-core mode is active
+CONFIG_FREERTOS_UNICORE=n
+
+# Flash Memory Configuration (N8 = 8 MB)
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="8MB"
+CONFIG_ESPTOOLPY_FLASHMODE_DIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# PSRAM Configuration (R2 = 2 MB Quad SPI)
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_TYPE_AUTO=y
+CONFIG_SPIRAM_MODE_QUAD=y
+CONFIG_SPIRAM_SPEED_80M=y
+
+# Strategy: allocations >= 4KB go to PSRAM automatically
+CONFIG_SPIRAM_USE_MALLOC=y
+
+# Ensures memory alignment constraints are met for DMA
+CONFIG_SPIRAM_MALLOC_ALWAYSALIGN=y
