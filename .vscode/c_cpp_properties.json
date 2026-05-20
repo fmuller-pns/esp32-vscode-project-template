@@ -6,11 +6,13 @@
             "compileCommands": "${workspaceFolder}/build/compile_commands.json",
             "intelliSenseMode": "linux-gcc-x64",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${IDF_PATH}/components/**"
             ],
             "browse": {
                 "path": [
-                    "${workspaceFolder}"
+                    "${workspaceFolder}",
+                    "${IDF_PATH}/components/**"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }
@@ -21,11 +23,13 @@
             "compileCommands": "${workspaceFolder}/build/compile_commands.json",
             "intelliSenseMode": "linux-gcc-x64",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${IDF_PATH}/components/**"
             ],
             "browse": {
                 "path": [
-                    "${workspaceFolder}"
+                    "${workspaceFolder}",
+                    "${IDF_PATH}/components/**"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }
