@@ -7,11 +7,6 @@ sdkconfig.old
 build/
 html_doc/
 
-# Ignore local workspace settings that contain absolute machine paths
-.vscode/c_cpp_properties.json
-.vscode/launch.json
-.vscode/settings.json
-
 # Python
 __pycache__/
 *.pyc

@@ -49,10 +49,7 @@ idf.py set-target esp32c6
 ```bash
 code .
 ```
-#### 6. Menu: View / Command Palette (to generate .vscode folder for configuration)
-```bash
-ESP-IDF: Add vscode configuration folder
-```
+#### 6. In VS Code, In the bottom right corner, select "ESP32/ESP32-S3" or "ESP32-C6"
 
 #### 7. Open a terminal from Visual Studio Code to perform commands
 Choose an external or internal terminal.
@@ -103,25 +100,22 @@ To exit monitoring, typing `Ctrl+AltGr+]`
 
 ## Useful Commands 
 
-#### Change target (example for esp32c6) 
+#### Change target
 
-##### 1. Select new target
+##### 1. Select new target (ex: esp32c6)
 ```bash
 idf.py set-target esp32c6
-rm -rf .vscode
 ```
 
-##### 2. In vscode, Menu: View / Command Palette (to generate new .vscode folder for configuration)
-```bash
-ESP-IDF: Add vscode configuration folder
-```
+##### 2. In VS Code, In the bottom right corner, select "ESP32/ESP32-S3" or "ESP32-C6"
 
-#### Open external terminal from vscode to perform commands
+
+#### Open external terminal from VS Code to perform commands
 
   * using keyboard shortcut: `Ctrl+Shift+C`
   * or pressing `F1` key and typing `external`
 
-#### Open integrated terminal from vscode to perform commands
+#### Open integrated terminal from VS Code to perform commands
 
   * using keyboard shortcut: `Ctrl+Shift+`<sup>2</sup>
   * or pressing `F1` key and typing `integrated`
@@ -178,7 +172,7 @@ cd <project_name>
 git config --global user.name "your name" 
 git config --global user.email "your email address"
 ```
-#### Avoid typing your username and personal access token in vscode each time
+#### Avoid typing your username and personal access token in VS Code each time
 This is useful when connecting your GIT to GitHub.
 ```bash
 git config credential.helper store
@@ -287,7 +281,7 @@ idf.py -p /dev/ttyUSB0 flash monitor
 
 You can use [Using Tasks for ESP32](#using-tasks-for-esp32-to-run-debug-project-and-so-on) or follow the steps below.
 
-1. Open external terminal from vscode, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
+1. Open external terminal from VS Code, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
 2. Generate HTML documentation in `html_doc` folder
 
   * From the User interface (allow you updating the `Doxyfile` configuration file)

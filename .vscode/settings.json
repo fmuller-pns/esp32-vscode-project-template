@@ -1,0 +1,5 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.extensionActivationMode": "always",
+  "idf.currentSetup": "${IDF_PATH}"
+}
