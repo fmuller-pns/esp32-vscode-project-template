@@ -1,5 +1,16 @@
 {
-  "C_Cpp.intelliSenseEngine": "default",
-  "idf.extensionActivationMode": "always",
-  "idf.currentSetup": "${IDF_PATH}"
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.extensionActivationMode": "always",
+    "idf.currentSetup": "/home/pns/.espressif/v6.0/esp-idf",
+    "C_Cpp.errorSquiggles": "enabled",
+
+    "terminal.explorerKind": "external",
+    "terminal.external.linuxExec": "gnome-terminal",
+    
+    "terminal.integrated.profiles.linux": {
+        "esp-idf-externe": {
+            "path": "/usr/bin/gnome-terminal",
+            "args": ["--", "/bin/bash", "-c", "/home/pns/.espressif/v6.0/esp-idf/export.sh && bash"]
+        }
+    }
 }

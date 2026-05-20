@@ -155,11 +155,7 @@ To exit monitoring, typing `Ctrl+AltGr+]`
 
 1. In the menu, select `Run Task...`
 2. Select the task you want to launch:
-- `ESP32 - Build only`: just build the project
-- `ESP32 - Flash and Monitor`: build (when modifications of code), flash and monitor
-- `ESP32 - Clean Project`: Clean project (Full clean)
-- `ESP32 - OpenOCD with FT2232`: Run in dedicated terminal the openOCD command to debug the project
-- `ESP32 - Doxygen - HTML doc.`: Generate HTML documentation with Doxygen
+- `ESP-IDF: Doxygen - HTML doc.`: Generate HTML documentation with Doxygen
 
 ## Configure GIT for your new project
 
@@ -281,8 +277,17 @@ idf.py -p /dev/ttyUSB0 flash monitor
 
 You can use [Using Tasks for ESP32](#using-tasks-for-esp32-to-run-debug-project-and-so-on) or follow the steps below.
 
-1. Open external terminal from VS Code, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
-2. Generate HTML documentation in `html_doc` folder
+
+1. Install doxygen
+```bash
+sudo apt install doxygen-gui
+```
+2. Install graphviz (interactive view), Optionnal
+```bash
+sudo apt install graphviz
+```
+3. Open external terminal from VS Code, using keyboard shortcut: `Ctrl+Shift+C`, or pressing `F1` key and typing `external`
+4. Generate HTML documentation in `html_doc` folder
 
   * From the User interface (allow you updating the `Doxyfile` configuration file)
 

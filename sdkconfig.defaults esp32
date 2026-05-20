@@ -1,0 +1,13 @@
+# Run the command : idf.py set-target esp32
+
+# =====================================================================
+# Specific configuration for ESP32-PICO-D4 (revision 1)
+# =====================================================================
+
+# Ensure dual-core mode is active
+CONFIG_FREERTOS_UNICORE=n
+
+# Flash Memory Configuration
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="4MB"
+
