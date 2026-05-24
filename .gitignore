@@ -1,15 +1,49 @@
 
-# Ignore the generated local configuration
+# ==========================================
+# Cible de compilation ESP-IDF 
+# ==========================================
+build/
+
+# ==========================================
+# Gestionnaire de composants 
+# ==========================================
+# Ce dossier est généré automatiquement par idf_component.yml
+managed_components/
+dependencies.lock
+
+# ==========================================
+# Configuration locale ESP-IDF
+# ==========================================
 sdkconfig
 sdkconfig.old
 
-# Ignore all compiled binaries and object files
-build/
+# ==========================================
+# Environnement Python & ESP-IDF
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+.espressif/
+
+# ==========================================
+# Fichiers Systèmes
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# IDEs (VS Code, Eclipse, etc.)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+
+# ==========================================
+# Fichiers spécifiques
+# ==========================================
 html_doc/
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-.DS_Store
+
 
